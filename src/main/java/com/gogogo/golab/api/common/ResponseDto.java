@@ -1,5 +1,7 @@
 package com.gogogo.golab.api.common;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +13,9 @@ import lombok.Setter;
 public class ResponseDto<T> {
   private int code;
   private String message;
+  @JsonInclude(Include.NON_NULL)
   private T data;
+  @JsonInclude(Include.NON_NULL)
   private PageInfo pageInfo;
 
   @Builder

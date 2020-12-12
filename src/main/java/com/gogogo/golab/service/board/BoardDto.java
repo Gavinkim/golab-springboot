@@ -2,6 +2,7 @@ package com.gogogo.golab.service.board;
 
 import com.gogogo.golab.domain.board.Board;
 import java.time.LocalDateTime;
+import javax.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,8 +12,12 @@ import lombok.NoArgsConstructor;
 public class BoardDto {
 
   private Long idx;
+
+  @NotNull
   private String title;
+  @NotNull
   private String content;
+
   private LocalDateTime createdAt;
   private LocalDateTime updatedAt;
 

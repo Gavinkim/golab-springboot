@@ -10,11 +10,13 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Where;
 
 @NoArgsConstructor
 @Getter
 @Table
 @Entity
+@Where(clause = "is_deleted='0'")
 public class User {
 
   @Id
@@ -30,6 +32,8 @@ public class User {
 
   @Column(nullable = false,length = 100,unique = true)
   private String email;
+
+  private boolean isDeleted;
 
   @Builder
   public User(Long idx, String name, String password, String email) {

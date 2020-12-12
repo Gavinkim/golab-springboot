@@ -2,6 +2,7 @@ package com.gogogo.golab.service.user;
 
 import com.gogogo.golab.domain.user.User;
 import com.gogogo.golab.domain.user.UserRepository;
+import com.gogogo.golab.service.exception.DuplicateEmailException;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,6 +31,10 @@ public class UserServiceImpl implements UserService {
   @Transactional(readOnly = false)
   @Override
   public void save(UserDto userDto) {
+    long isExist = userRepository.countByEmail(userDto.getEmail());
+    if(isExist>0){
+      throw new DuplicateEmailException("Already Exists");
+    }
     userRepository.save(userDto.toEntity());
   }
 

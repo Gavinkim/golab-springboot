@@ -1,0 +1,18 @@
+### save post
+POST http://localhost:9090/board
+Content-Type: application/json
+
+{
+  "title": "Test123",
+  "content": "world world"
+}
+
+### save user
+POST http://localhost:9090/users
+Content-Type: application/json
+
+{
+  "name": "12234234",
+  "email": "tester5@test.com",
+  "password": "WQsuejsk0-a3skas"
+}
