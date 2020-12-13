@@ -1,4 +1,4 @@
-package com.gogogo.golab.api.common;
+package com.gogogo.golab.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

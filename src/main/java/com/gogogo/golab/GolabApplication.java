@@ -1,12 +1,7 @@
 package com.gogogo.golab;
 
-import com.gogogo.golab.domain.board.Board;
-import com.gogogo.golab.domain.board.BoardRepository;
-import java.util.stream.IntStream;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @EnableJpaAuditing

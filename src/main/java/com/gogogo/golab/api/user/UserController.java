@@ -1,10 +1,8 @@
 package com.gogogo.golab.api.user;
 
-import com.gogogo.golab.api.common.ResponseDto;
-import com.gogogo.golab.domain.user.User;
+import com.gogogo.golab.common.ResponseDto;
 import com.gogogo.golab.service.user.UserDto;
 import com.gogogo.golab.service.user.UserService;
-import java.util.List;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
 package com.gogogo.golab.api.board;
 
-import com.gogogo.golab.api.common.ResponseDto;
+import com.gogogo.golab.common.ResponseDto;
 import com.gogogo.golab.service.board.BoardDto;
 import com.gogogo.golab.service.board.BoardService;
 import javax.validation.Valid;

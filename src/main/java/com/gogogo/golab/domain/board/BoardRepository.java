@@ -1,10 +1,10 @@
 package com.gogogo.golab.domain.board;
 
+import com.gogogo.golab.domain.GolabJpaRepository;
 import java.util.Optional;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface BoardRepository extends JpaRepository<Board,Long> {
+public interface BoardRepository extends GolabJpaRepository<Board,Long>, BoardCustomRepository {
 
   Optional<Board> findByIdx(Long idx);
 

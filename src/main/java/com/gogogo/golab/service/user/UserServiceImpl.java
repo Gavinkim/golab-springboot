@@ -2,7 +2,7 @@ package com.gogogo.golab.service.user;
 
 import com.gogogo.golab.domain.user.User;
 import com.gogogo.golab.domain.user.UserRepository;
-import com.gogogo.golab.service.exception.DuplicateEmailException;
+import com.gogogo.golab.exception.DuplicateEmailException;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

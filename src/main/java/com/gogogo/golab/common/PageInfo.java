@@ -1,4 +1,4 @@
-package com.gogogo.golab.api.common;
+package com.gogogo.golab.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

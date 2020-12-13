@@ -1,4 +1,4 @@
-package com.gogogo.golab.service.exception;
+package com.gogogo.golab.exception;
 
 public class DuplicateEmailException extends RuntimeException{
 

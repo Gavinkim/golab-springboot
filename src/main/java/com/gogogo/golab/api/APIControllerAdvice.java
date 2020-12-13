@@ -1,6 +1,9 @@
-package com.gogogo.golab.api.common;
+package com.gogogo.golab.api;
 
-import com.gogogo.golab.service.exception.DuplicateEmailException;
+import com.gogogo.golab.common.ResponseCode;
+import com.gogogo.golab.common.ResponseDto;
+import com.gogogo.golab.exception.ConnectionException;
+import com.gogogo.golab.exception.DuplicateEmailException;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.http.ResponseEntity;
@@ -22,5 +25,10 @@ public class APIControllerAdvice {
   @ExceptionHandler(DuplicateEmailException.class)
   public ResponseEntity<ResponseDto> duplicateEmail(){
     return ResponseEntity.badRequest().body(ResponseDto.error(ResponseCode.ALREADY_EXISTS));
+  }
+
+  @ExceptionHandler(ConnectionException.class)
+  public ResponseEntity<ResponseDto> connectionFail(){
+    return ResponseEntity.badRequest().body(ResponseDto.error(ResponseCode.EXTERNAL_CONNECTION_ERROR));
   }
 }
